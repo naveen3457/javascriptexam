@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+// firstquestion
+
+function perfectsquare(n){
+	let left = 2;
+  right = n;
+  while(left<=right)
+  {
+  	let mid = left +Math.floor((right - left)%2);
+    if(mid * mid * mid *mid===n)
+    {
+    	console.log(mid,mid,mid,mid);
+    	return true;
+    }
+    else if(mid * mid * mid *mid>n)
+    {
+    	right = mid-1;
+    }
+    else if(mid * mid * mid *mid<n)
+    {
+    	left = mid+1;
+    }    
+  }
+  return false;
+}
+
+console.log(perfectsquare(625));
+
+
+
+// second question
+
+// var powerfulIntegers = function (x, y, bound) {
+//     let temp = 0;
+//     let maxX = 1;
+//     let maxY = 1;
+//     let answers = [];
+
+//     for (let i = 2; Math.pow(x, i) <= bound; i++) {
+//         if (x === 1) {
+//             break;
+//         }
+//         maxX = i;
+//     }
+
+//     for (let i = 2; Math.pow(y, i) <= bound; i++) {
+//         if (y === 1) {
+//             break;
+//         }
+//         maxY = i;
+//     }
+
+//     for (let i = 0; i <= maxX; i++) {
+//         for (let j = 0; j <= maxY; j++) {
+//             temp = Math.pow(x, i) + Math.pow(y, j);
+//             if (temp <= bound && !answers.includes(temp)) {
+//                 answers.push(temp);
+//             }
+//         }
+//     }
+
+//     return console.log(answers);
+// };
+
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
